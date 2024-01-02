@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-for letter in "abcdefghijklmnopqrstuvwxyz":
-    print("{}".format(chr(letter)), end="");
+"""abcdefghijklmnopqrstuvwxyz"""
+for i in range(97, 123, 1):
+    print("{}".format(chr(i)), end="");
