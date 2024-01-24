@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Defines a class Square"""
+""" this module defines a empty class square """
+
+
 class Square:
     """ empty class for task 0 """
     pass
