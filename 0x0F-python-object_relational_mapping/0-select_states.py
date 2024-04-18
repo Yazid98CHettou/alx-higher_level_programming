@@ -13,5 +13,5 @@ if __name__ == '__main__':
     rows = curs.fetchall()
     for row in rows:
         print(row)
-    cusr.close()
+    curs.close()
     data.close()
