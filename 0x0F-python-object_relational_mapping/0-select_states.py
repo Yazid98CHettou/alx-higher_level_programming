@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-import sys
-import MySQLdb
-
 if __name__ == "__main__":
-    data = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], data=sys.argv[3])
+    import sys
+    import MySQLdb
+    data = MySQLdb.connect(host="localhost",port=3306,user=argv[1],passwd=argv[2],data=argv[3])
 
     curs = data.cursor()
     curs.execute("SELECT * FROM states ORDER BY id")
-    [print(state) for state in curs.fetchall()]
+    rows = curs.fetchall()
+    for row in rows:
+        print(row)
+    curs.close()
+    database.close()
