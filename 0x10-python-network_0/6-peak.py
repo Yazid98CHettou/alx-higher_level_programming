@@ -1,18 +1,18 @@
 def find_peak(list_of_integers):
 
-    loi = list_of_integers
-    if loi == []:
+    lst = list_of_integers
+    if lst == []:
         return None
-    total = len(loi)
+    total = len(lst)
     if total == 1:
-        return loi[0]
+        return lst[0]
     elif total == 2:
-        return max(loi)
+        return max(lst)
     middle = int(total / 2)
-    peak = loi[middle]
-    if peak > loi[middle - 1] and peak > loi[middle + 1]:
+    peak = lst[middle]
+    if peak > lst[middle - 1] and peak > lst[middle + 1]:
         return peak
-    elif peak < loi[middle - 1]:
-        return find_peak(loi[:middle])
+    elif peak < lst[middle - 1]:
+        return find_peak(lst[:middle])
     else:
-        return find_peak(loi[middle + 1:])
+        return find_peak(lst[middle + 1:])
