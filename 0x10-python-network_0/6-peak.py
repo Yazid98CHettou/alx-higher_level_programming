@@ -1,18 +1,15 @@
-def find_peak(list_of_integers):
+#!/usr/bin/python3
 
+def find_peak(list_of_integers):
     lst = list_of_integers
-    if lst == []:
+    peaks = []
+    for i in range(1, len(list_of_integers)-1):
+        if lst[i] > lst[i-1] and lst[i] > lst[i+1]:
+            peaks.append(l[i])
+        if lst[i] < lst[i-1] and lst[i] < lst[i+1]:
+            peaks.append(l[i])
+        if lst[i] == lst[i-1] and lst[i] == lst[i+1]:
+            peaks.append(lst[i])
+    if len(peaks) == 0:
         return None
-    total = len(lst)
-    if total == 1:
-        return lst[0]
-    elif total == 2:
-        return max(lst)
-    middle = int(total / 2)
-    peak = lst[middle]
-    if peak > lst[middle - 1] and peak > lst[middle + 1]:
-        return peak
-    elif peak < lst[middle - 1]:
-        return find_peak(lst[:middle])
-    else:
-        return find_peak(lst[middle + 1:])
+    return max(peaks)
